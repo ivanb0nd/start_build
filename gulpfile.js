@@ -8,6 +8,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = require('gulp-imagemin');
 const newer        = require('gulp-newer');
 const del          = require('del');
+const ttf2woff     = require('gulp-ttf2woff');
+const ttf2woff2    = require('gulp-ttf2woff2');
+
 
 
 
@@ -70,6 +73,17 @@ function images () {
     .pipe(dest('dist/images'))
 }
 
+function fonts() {
+    return src('app/fonts/**/*.ttf')
+    .pipe(ttf2woff())
+    .pipe(dest('dist/fonts/'));
+
+  // return src('app/fonts/**/*')
+  //   .pipe(ttf2woff2())
+  //   .pipe(dest('dist/fonts')); 
+  
+}
+
 
 
 function cleandist() {
@@ -95,7 +109,7 @@ exports.browsersync = browsersync;
 exports.scripts     = scripts;
 exports.images      = images;
 exports.cleandist   = cleandist;
+exports.fonts       = fonts;
 
-
-exports.build       = series(cleandist, images, buildproject) ;
+exports.build       = series(cleandist, images, buildproject, fonts) ;
 exports.default     = parallel(scss, scripts, watching, browsersync); 
