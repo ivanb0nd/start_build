@@ -74,13 +74,13 @@ function images () {
 }
 
 function fonts() {
-    return src('app/fonts/**/*.ttf')
+     src('app/fonts/**/*.ttf')
     .pipe(ttf2woff())
     .pipe(dest('dist/fonts/'));
 
-  // return src('app/fonts/**/*')
-  //   .pipe(ttf2woff2())
-  //   .pipe(dest('dist/fonts')); 
+    return src('app/fonts/**/*')
+    .pipe(ttf2woff2())
+    .pipe(dest('dist/fonts')); 
   
 }
 
