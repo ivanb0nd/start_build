@@ -3,6 +3,9 @@
 @import 'variables';
 @import 'fonts';
 @import 'global';
+
+@import 'header';
+@import 'footer';
 //------ 
 
 // Медиа запросы
@@ -11,3 +14,32 @@
 
 //Основные стили
 
+// Variables
+
+$minWidth: 320px;
+// $maxWidth: 1920;  - для отзывчивости, адаптивного шрифта и прочего
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+// адаптивная сетка
+
+.container{
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    @media (max-width: $md1 + px){
+        max-width: 970px;
+        
+    }
+    @media (max-width: $md1 + px){
+        max-width: 750px;
+
+    }
+    @media (max-width: $md1 + px){
+        max-width: none;
+        padding: 0 10px;
+    }
+}
