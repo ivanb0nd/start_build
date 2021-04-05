@@ -1,9 +1,16 @@
-
+// ОБЩИЕ ПАРАМЕТРЫ
 body {
     min-width: 320px;
-    overflow-x: hidden;
-    position: relative;
-    // Цвет текста на всей странице
     color: $text-color;
     font-family: $fontFamily;
+    font-size: 14px;
+    overflow-x: hidden;
+    position: relative;
+    &._lock{
+        overflow: hidden;
+    }
+}
+
+.page {
+    flex: 1 1 auto;
 }

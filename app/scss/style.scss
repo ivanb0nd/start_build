@@ -1,18 +1,3 @@
-// Другие файлы scss
-@import 'nullstyler';
-@import 'variables';
-@import 'fonts';
-@import 'global';
-
-@import 'header';
-@import 'footer';
-//------ 
-
-// Медиа запросы
-@import 'media';
-//------
-
-//Основные стили
 
 // Variables
 
@@ -25,7 +10,7 @@ $md3: 767.98;
 $md4: 479.98;
 
 
-// адаптивная сетка
+// Адаптивная сетка
 
 .container{
     max-width: $maxWidthContainer + px;
@@ -34,12 +19,35 @@ $md4: 479.98;
         max-width: 970px;
         
     }
-    @media (max-width: $md1 + px){
+    @media (max-width: $md2 + px){
         max-width: 750px;
 
     }
-    @media (max-width: $md1 + px){
+    @media (max-width: $md3 + px){
         max-width: none;
         padding: 0 10px;
     }
 }
+
+
+// Обнуление стилей
+@import 'nullstyler';
+
+
+// Другие файлы scss
+@import 'fonts';
+@import 'variables';
+@import 'global';
+@import 'ui';
+@import 'forms';
+@import 'buttons';
+
+
+// Медиа запросы
+@import 'media';
+
+
+// Another pages
+@import 'header';
+@import 'home';
+@import 'footer'; 
