@@ -10,8 +10,20 @@ $md3: 767.98;
 $md4: 479.98;
 
 
-// Адаптивная сетка
+// Оболочка страницы
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    &._loaded{
+        
+    }
+}
 
+
+// Адаптивная сетка
 .container{
     max-width: $maxWidthContainer + px;
     margin: 0 auto;
@@ -47,7 +59,7 @@ $md4: 479.98;
 @import 'media';
 
 
-// Another pages
+// Подключение файлов стилей страниц и элементов
 @import 'header';
 @import 'home';
 @import 'footer'; 
