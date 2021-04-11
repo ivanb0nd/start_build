@@ -1,5 +1,6 @@
 .header {
-
+    position: relative;
+    z-index: 9;
     &__content {
         
     }
@@ -23,8 +24,6 @@
         z-index: 5;
         width: 30px;
         height: 18px;
-        top: 18px;
-        right: 10px;
         cursor: pointer;
         span {
             transition: all .3s ease 0s;
