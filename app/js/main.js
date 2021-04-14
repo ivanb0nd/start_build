@@ -16,7 +16,6 @@ if (iconMenu){
 // scroll
 
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-console.log(menuLinks);
 
 if (menuLinks.length > 0) {
   menuLinks.forEach(menuLinks => {
